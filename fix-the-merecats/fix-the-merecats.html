@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Replace all Dots</title>
+  </head>
+  <body>
+    <!-- https://github.com/codefellows-seattle-301n9/00-code-wars -->
+    <script>
+    'use strict';
+    //debugger;
+    var arr = ["tail", "body", "head"];
+    console.log(arr);
+
+//code that worked in code wars.
+    // function fixTheMeerkat(arr) {
+    //  //your code here
+    //  var pos1 = arr[0];
+    //  var pos2 = arr[1];
+    //  var pos3 = arr[2];
+    //  arr = [];
+    //  arr.push(pos3);
+    //  arr.push(pos2);
+    //  arr.push(pos1);
+    //  return arr;
+    // };
+
+    function fixTheMeerkat() {
+      //your code here
+      var pos1 = arr[0];
+      var pos2 = arr[1];
+      var pos3 = arr[2];
+      arr = [];
+      arr.push(pos3);
+      arr.push(pos2);
+      arr.push(pos1);
+    };
+    fixTheMeerkat();
+    console.log(arr);
+
+// Test.describe("Basic tests",_=>{
+// Test.assertSimilar(fixTheMeerkat(["tail", "body", "head"]), ["head", "body", "tail"]);
+// Test.assertSimilar(fixTheMeerkat(["tails", "body", "heads"]), ["heads", "body", "tails"]);
+// Test.assertSimilar(fixTheMeerkat(["bottom", "middle", "top"]), ["top", "middle", "bottom"]);
+// Test.assertSimilar(fixTheMeerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"]);
+// Test.assertSimilar(fixTheMeerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"]);
+// })
+
+    </script>
+  </body>
+</html>
