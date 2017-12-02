@@ -5,46 +5,38 @@
     <title>Replace all Dots</title>
   </head>
   <body>
-    <!-- https://github.com/codefellows-seattle-301n9/00-code-wars -->
+    <!-- https://www.codewars.com/kata/abbreviate-a-two-word-name/train/javascript-->
+    <!-- Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+The output should be two capital letters with a dot seperating them.
+It should look like this:
+Sam Harris => S.H
+Patrick Feeney => P.F -->
     <script>
     'use strict';
     //debugger;
-    var arr = ["tail", "body", "head"];
-    console.log(arr);
+    var name = ("Sam Harris");
 
-//code that worked in code wars.
-    // function fixTheMeerkat(arr) {
-    //  //your code here
-    //  var pos1 = arr[0];
-    //  var pos2 = arr[1];
-    //  var pos3 = arr[2];
-    //  arr = [];
-    //  arr.push(pos3);
-    //  arr.push(pos2);
-    //  arr.push(pos1);
-    //  return arr;
-    // };
+    console.log(name);
 
-    function fixTheMeerkat() {
-      //your code here
-      var pos1 = arr[0];
-      var pos2 = arr[1];
-      var pos3 = arr[2];
-      arr = [];
-      arr.push(pos3);
-      arr.push(pos2);
-      arr.push(pos1);
+    function abbrevName(){
+      var initials = name.split(" ").map((n)=>n[0]).join(".");
+      console.log(initials.toUpperCase());
+      return initials.toUpperCase();
     };
-    fixTheMeerkat();
-    console.log(arr);
+    abbrevName();
 
-// Test.describe("Basic tests",_=>{
-// Test.assertSimilar(fixTheMeerkat(["tail", "body", "head"]), ["head", "body", "tail"]);
-// Test.assertSimilar(fixTheMeerkat(["tails", "body", "heads"]), ["heads", "body", "tails"]);
-// Test.assertSimilar(fixTheMeerkat(["bottom", "middle", "top"]), ["top", "middle", "bottom"]);
-// Test.assertSimilar(fixTheMeerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"]);
-// Test.assertSimilar(fixTheMeerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"]);
-// })
+//working code
+// function abbrevName(name){
+//       var initials = name.split(" ").map((n)=>n[0]).join(".");
+//       return initials.toUpperCase();
+//
+//     };
+
+    // Test.assertEquals(abbrevName("Sam Harris"), "S.H");
+    // Test.assertEquals(abbrevName("Patrick Feenan"), "P.F");
+    // Test.assertEquals(abbrevName("Evan Cole"), "E.C");
+    // Test.assertEquals(abbrevName("P Favuzzi"), "P.F");
+    // Test.assertEquals(abbrevName("David Mendieta"), "D.M");
 
     </script>
   </body>
