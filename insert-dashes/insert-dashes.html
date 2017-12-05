@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Replace all Dots</title>
+  </head>
+  <body>
+    <!-- https://github.com/codefellows-seattle-301n9/00-code-wars -->
+    <script>
+    'use strict';
+    //debugger;
+    var num = 454793;
+    function insertDash() {
+      var str = num.toString().split('');
+      //console.log('string: ' + str);
+      var newStr = [];
+      newStr.push(str[0]);
+      //console.log('newstring: ' + newStr);
+      for (var i = 1; i < str.length; i++) {
+        var currentNewStrL = newStr.length;
+        if ((parseInt(newStr[currentNewStrL-1]) % 2 === 1) && (parseInt(str[i] % 2) === 1)) {
+          //console.log('both are odd');
+        	newStr.push('-');
+          newStr.push(str[i]);
+        } else {
+        	newStr.push(str[i]);
+        }
+        //console.log('new string: ' + newStr);
+      }
+      return newStr.join('');
+    };
+    insertDash();
+    </script>
+  </body>
+</html>
